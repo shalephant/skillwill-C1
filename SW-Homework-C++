@@ -1,0 +1,28 @@
+int main()
+{
+    char letter = 'T';
+    int hundred = 100;
+    cout << letter << endl;
+    cout << hundred << endl;
+    
+    float tenten = 10.10;
+    double fiftySmth = 50.23;
+    
+    double sum = 0;
+    double count = 0;
+    double average;
+    
+    int array[5] = {5, 10, 15, 20, 30};
+    
+    for (int i=0; i<5; i++){
+        sum += array[i];
+        ++count;
+    }
+    
+    average = sum / count;
+    
+    cout << sum << endl;
+    cout << count << endl;
+    cout << average << endl;
+    return 0;
+}
