@@ -73,3 +73,78 @@ int main()
     return 0;
 }
 
+/* 3. Conversion of Fahrenhait to Celsius
+and vice versa. With input by user */
+
+int main()
+{
+    float celsius;
+    float fahrenhait;
+    
+    string temperatureType;
+    cout << "Let's see what temeparture it is today" << endl;
+    cout << "Would you like to convert Celsius or Fahrenhait? ";
+    cin >> temperatureType;
+    if(temperatureType == "Celsius"){
+        cout << "enter degrees celsius: ";
+        cin >> celsius;
+        
+    float celsiusToFahrenheit = (celsius * 9 / 5) + 32;
+        cout << "It is " << celsiusToFahrenheit << " Degrees Fahrenhait outside";
+    }else if(temperatureType == "Fahrenhait") {
+        cout << "Enter degrees Fahrenait: ";
+        cin >> fahrenhait;
+
+        float fahrenhaitToCelsius = (fahrenhait - 32) * 5 / 9;
+        cout << "It is " << fahrenhaitToCelsius << " Degrees Celsius outside";
+    }else{
+        cout << "temperature type entered incorrectly, try again";
+    }
+    
+    return 0;
+}
+
+/* 4. Leap year teller */
+int main()
+{
+    int year;
+    cout << "Check if it is a leap year: ";
+    cin >> year;
+    if (year % 4 == 0) {
+        cout << "Yup, " << year << " is indeed a leap year";
+    } else {
+        cout << year << " is not a leap year, sorry if you were born on 29th of February";
+    }
+    
+    return 0;
+}
+
+/* 5. finding the distance between
+    two points on coordinate plane */
+    
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int x1, y1, x2, y2;
+    
+    cout << "Lets find the distance between two points on coordinate plane." << endl;
+    cout << "First, tell me the coordinate for x1: ";
+    cin >> x1;
+    cout << "And y1, please: ";
+    cin >> y1;
+    cout << "Now we need x2: ";
+    cin >> x2;
+    cout << "And last we need y2: ";
+    cin >> y2;
+    
+    float distance = sqrt(pow((x2 - x1),2) + pow((y2 - y1),2));
+    
+    cout << "And the distance is: " << distance; 
+    
+    return 0;
+}
+
