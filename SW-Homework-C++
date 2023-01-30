@@ -26,3 +26,50 @@ int main()
     cout << average << endl;
     return 0;
 }
+
+/* 2nd Homework
+1. Find the highest out of three inputed integers
+*/
+
+int main()
+{
+    int num1;
+    int num2;
+    int num3;
+    cout << "Enter the fisrt number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    cout << "Enter the third number: ";
+    cin >> num3;
+    
+    if(num1 > num2 && num1 > num3) {
+        cout <<  num1 << " is the highest number";
+    } else if  (num2 > num1 && num2 > num3) {
+        cout << num2 << " is the highest number";
+    } else if (num3 > num1 && num3 > num2) {
+        cout << num3 << " is the highest number";
+    } else {
+        cout << "there is no highest number here";
+    }
+
+    return 0;
+}
+
+/* 2. Find area of the circle.
+let user give us the radius */
+
+int main()
+{
+    double p = 3.14159;
+    int r;
+    cout << "Enter the radius of the circle: ";
+    cin >> r;
+    double area = p*(r*r);
+    
+    cout << "Area of the circle is: " << area;
+    cout << p;
+
+    return 0;
+}
+
