@@ -148,3 +148,60 @@ int main()
     return 0;
 }
 
+/* 6. Quadratic equation solver */
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int a, b, c;
+    float x1;
+    float x2;
+    cout << "Ah, quadratic equation, our favourite <3 " << endl;
+    cout << "Please enter number for a: ";
+    cin >> a;
+    cout << "Now we need b: ";
+    cin >> b;
+    cout << "And lastly c: ";
+    cin >> c;
+    cout << "Now lets find what x could be: " << endl;
+    
+    x1 = (-b + sqrt(pow(b,2)-(4 * a * c))) / (2 * a);
+    x2 = (-b - sqrt(pow(b,2)-(4 * a * c))) / (2 * a);
+    cout << "In this case x can be " << x1 << " and " << x2;
+    
+    return 0;
+}
+
+/* 7. Calculator with switch */
+
+int main()
+{
+    int num1, num2;
+    char oper;
+    cout << "Please choose your first number: ";
+    cin >> num1;
+    cout << "Now enter your second number: ";
+    cin >> num2;
+    cout << "Would would you like to do with them? Options are: +, -, * and / ";
+    cin >> oper;
+    
+    switch (oper) {
+        case '+':
+            cout << "Addition of those numbers would equal to: " << num1 + num2;
+            break;
+        case '-':
+            cout << "Substraction of those numbers would equal to: " << num1 - num2;
+            break;
+        case '*':
+            cout << "Multiplication of those numbers would equal to: " << num1 * num2;
+            break;
+        case '/':
+            cout << "Division of those numbers would equal to: " << num1 / num2;
+            break;
+        default: 
+            cout << "Please enter right avalible operator";
+    }
+    return 0;
+}
