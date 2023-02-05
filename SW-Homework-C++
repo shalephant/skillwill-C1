@@ -205,3 +205,77 @@ int main()
     }
     return 0;
 }
+
+/*HOMEWORK 26 
+While loops 
+1.Sum of all digits of a number
+*/
+int main()
+{
+    int number;
+    cout<<"Enter the number: ";
+    cin>>number;
+    int addition = 0;
+    int leftover;
+    
+    while(number>0){
+        leftover = number%10;
+        number = number /10;
+        addition = addition + leftover;
+    }
+    
+    cout<<"Sum of all digits of that number is: "<<addition;
+
+    return 0;
+}
+
+/*
+3. Bigges divisor of two numbers 
+*/
+int main()
+{
+    int num1, num2;
+    cout<<"Enter the first number: ";
+    cin>>num1;
+    cout<<"Enter the second number: ";
+    cin>>num2;
+  
+  /*numbers substract each outher, 
+  untill they become the same number,
+  which will be the greatest divisor for both*/
+  
+    while(num1 != num2) {
+        if(num1>num2){
+            num1 = num1 - num2;
+        } else {
+            num2 = num2 - num1;
+        }
+    }
+    cout<<"Yvelaze didi gamyopi: "<<num1;
+
+    return 0;
+}
+
+/*
+5. Write a program using integers usernum and x as input, and output usernum divided by x four times.
+*/
+
+int main()
+{
+    int yourNum, x;
+    int i = 0;
+    cout<<"Enter yourNum: ";
+    cin>>yourNum;
+    cout<<"Enter x: ";
+    cin>>x;
+    
+    while(i<4){
+        yourNum = yourNum / x;
+        cout<<yourNum;
+        i++;
+    }
+    
+
+    return 0;
+}
+
