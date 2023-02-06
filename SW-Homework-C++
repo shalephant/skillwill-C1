@@ -279,3 +279,40 @@ int main()
     return 0;
 }
 
+/* 28 Nested loops and 2D Arrays */
+/* 1.average of 5 numbers*/
+int main()
+{
+    int num[5];
+    int sum = 0;
+    int average;
+    cout<<"Enter 5 numbers, to find their average:";
+    for (int i=0; i<5; i++){
+        cin>>num[i];
+        
+        sum += num[i];
+    }
+    for (int i=0; i<5; i++){
+    }
+    cout<< sum;
+    average = sum/5;
+    cout <<"Average is: "<<average;
+    return 0;
+}
+
+/* 2. Sum of array elements */
+int main()
+{
+    int array[100];
+    int sum = 0;
+    int arraySize = 0;
+    cout<<"Enter array size: ";
+    cin>>arraySize;
+    cout<<"Now enter that many elements: ";
+    for (int i=0; i<arraySize; i++){
+        cin>>array[i];
+        sum += array[i];
+    }
+    cout<<"Sum of them is: "<< sum;
+    return 0;
+}
