@@ -326,8 +326,26 @@ using namespace std;
     
     int division(int a,int b){
     float c = a / b;
-    cout<<"Division of those numbers equal to: "<<c;
     return c;
+    } 
+
+
+int main()
+{
+    int firstNumber;
+    int secondNumber;
+    
+    cout<<"Enter the first number: ";
+    cin>>firstNumber;
+    cout<<"Enter the second number: ";
+    cin>>secondNumber;
+    
+    cout<<division(firstNumber, secondNumber);
+
+/*2. Same but with void */
+    int division(int a,int b){
+    float c = a / b;
+    cout<<"Division of those numbers equal to: "<<c;
     } 
 
 
@@ -345,4 +363,53 @@ int main()
     return 0;
 }
 
-/*2. Same but with void */
+/*3. Fibonacci */
+using namespace std;
+    
+    int fib(int n){
+        if (n <= 1){
+            return n;
+        }else{
+           return fib(n-1)+fib(n-2);
+            }
+    }   
+
+int main()
+{
+    int n = 0;
+    cout<<"Enter the number: ";
+    cin>>n;
+    
+    for (int i=1; i<=n; i++){
+        cout<<fib(i);
+    }
+    
+    return 0;
+}
+
+/* Power function */
+using namespace std;
+    
+int powwer(int n,int p) {
+    int y = n;
+    for(int i=0; i<p; i++){
+        n *= y;
+        
+    }
+    return n;
+}
+
+int main()
+{
+    int number;
+    int to;
+    cout<<"Enter some number ";
+    cin>>number;
+    cout<<"How much should we power it? " ;
+    cin>>to;
+    
+    cout<<powwer(number, to);
+    
+    
+    return 0;
+}
