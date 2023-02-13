@@ -316,3 +316,33 @@ int main()
     cout<<"Sum of them is: "<< sum;
     return 0;
 }
+
+
+/* 29 Functions
+
+1. Division function */
+
+using namespace std;
+    
+    int division(int a,int b){
+    float c = a / b;
+    cout<<"Division of those numbers equal to: "<<c;
+    return c;
+    } 
+
+
+int main()
+{
+    int firstNumber;
+    int secondNumber;
+    
+    cout<<"Enter the first number: ";
+    cin>>firstNumber;
+    cout<<"Enter the second number: ";
+    cin>>secondNumber;
+    
+    division(firstNumber, secondNumber);
+    return 0;
+}
+
+/*2. Same but with void */
