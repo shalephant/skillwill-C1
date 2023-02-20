@@ -553,3 +553,44 @@ int main()
 
     return 0;
 }
+
+/* 34. Classes using constructors */
+#include <iostream>
+
+using namespace std;
+
+class Whiskey {
+    public:
+        string Name;
+        int Age;
+        string Region;
+    
+        Whiskey(string name, int age, string region){
+            Name = name;
+            Age = age;
+            Region = region;
+        }
+        Whiskey(string name, string region){
+            Name = name;
+            Age = 3;
+            Region = region;
+        }
+        
+        void introduction(){
+            cout<<"This wiskey is "<<Name<<" it was kept in barrels for minimum "<<Age<<" years and it is from "<<Region<<endl;
+        }
+};
+
+int main()
+{
+    Whiskey macallan("Macallan", 12, "Scotland");
+    macallan.introduction();
+    
+    Whiskey wildTurkey("Wild Turkey", 8, "Kentucky, USA");
+    wildTurkey.introduction();
+    
+    Whiskey jameson("Jameson", "Ireland");
+    jameson.introduction();
+
+    return 0;
+}
