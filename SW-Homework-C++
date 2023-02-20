@@ -500,3 +500,56 @@ int main()
 
     return 0;
 }
+
+
+/*32. Rectangle paramatere using Encapsulation */
+#include <iostream>
+
+using namespace std;
+
+class Rectangle {
+    private:
+        int width;
+        int height;
+    public:
+        int getWidth() {
+            return width;
+        };
+        int getHeight() {
+            return height;
+        };
+        
+        void setWidth(int newWidth) {
+            width = newWidth;
+        };
+        
+        void setHeight(int newHeight) {
+            height = newHeight;
+        };
+        
+        int perimeter(){
+            return height * 2 + width * 2;
+            
+        };
+};
+
+int main()
+{
+    Rectangle rectangle;
+    int h = 0;
+    int w = 0;
+    cout<<"Rectangle height is: ";
+    cin>>h;
+    cout<<"Rectangle width is: ";
+    cin>>w;
+    
+    rectangle.setHeight(h);
+    cout<<"If rectangles height is "<<rectangle.getHeight()<<" ";
+    rectangle.setWidth(w);
+    cout<<"and rectangles width is "<<rectangle.getWidth()<<endl;
+    
+    cout<<"Perimeter equals to: ";
+    cout<<rectangle.perimeter();
+
+    return 0;
+}
