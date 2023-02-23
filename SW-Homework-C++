@@ -594,3 +594,51 @@ int main()
 
     return 0;
 }
+
+
+/*35. Multiple inheritance  */
+
+
+#include <iostream>
+
+using namespace std;
+class GreatShow{
+    public:
+        string showName1;
+        void sayGreatShow(){
+        cout<<showName1<<" was a great fucking show"<<endl;
+        }
+    GreatShow(string inputShow1){
+        showName1 = inputShow1;
+        }
+};
+
+class WasOnTVShow{
+    public:
+        string showName2;
+        void sayTVShow(){
+            cout<<showName2<<" was airing on TV"<<endl;
+        };
+    WasOnTVShow(string inputShow2){
+        showName2 = inputShow2;
+        };
+};
+
+class ShowItself: public GreatShow, public WasOnTVShow {
+    public:
+        void sayHowGood(){
+            cout<<"It's definitely one of the best shows out there"<<endl;
+        };
+        
+    ShowItself(string inputShow1, string inputShow2): GreatShow(inputShow1), WasOnTVShow(inputShow2) {};
+};
+
+int main()
+{
+    ShowItself show("MrRobot", "Lost");
+    
+    cout<<show.showName2<<endl;
+    show.sayTVShow();
+
+    return 0;
+}
